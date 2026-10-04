@@ -1,0 +1,36 @@
+{
+  "items": [
+    {
+      "code": "CN-001",
+      "plateSize": "18x24cm",
+      "chemicalBatch": "B-0620",
+      "exposure": "8分钟",
+      "waterSource": "井水过滤",
+      "box": "蓝盒A-03",
+      "status": "待入盒",
+      "defect": "边角显影不均",
+      "logs": [
+        {
+          "at": "2026-06-20",
+          "step": "曝光",
+          "note": "阴天补时2分钟"
+        },
+        {
+          "at": "2026-06-21T03:50:30.042Z",
+          "step": "入盒",
+          "note": "放入A盒"
+        }
+      ],
+      "steps": [
+        {
+          "at": "2026-06-21T03:50:30.042Z",
+          "step": "入盒",
+          "developStatus": "稳定",
+          "defect": "边角显影不均",
+          "repair": "边角重涂",
+          "note": "放入A盒"
+        }
+      ]
+    }
+  ]
+}
