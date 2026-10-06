@@ -1,36 +1,74 @@
 {
+  "schemaVersion": 2,
+  "batches": [
+    {
+      "batch": "B-0620",
+      "concentration": 0.1,
+      "ratio": "1:2",
+      "version": 1,
+      "stock": 10,
+      "held": 0,
+      "consumed": 0
+    },
+    {
+      "batch": "B-LEGACY",
+      "concentration": 0.1,
+      "ratio": "1:1",
+      "version": 1,
+      "stock": 10,
+      "held": 0,
+      "consumed": 0,
+      "legacy": true,
+      "note": "历史数据补来源占位批次"
+    }
+  ],
+  "stations": [
+    {
+      "code": "WS-01",
+      "lockedBy": null
+    },
+    {
+      "code": "WS-02",
+      "lockedBy": null
+    }
+  ],
   "items": [
     {
+      "id": "CN-001",
       "code": "CN-001",
       "plateSize": "18x24cm",
       "chemicalBatch": "B-0620",
       "exposure": "8分钟",
       "waterSource": "井水过滤",
       "box": "蓝盒A-03",
-      "status": "待入盒",
+      "status": "待曝光",
       "defect": "边角显影不均",
       "logs": [
         {
           "at": "2026-06-20",
           "step": "曝光",
           "note": "阴天补时2分钟"
-        },
-        {
-          "at": "2026-06-21T03:50:30.042Z",
-          "step": "入盒",
-          "note": "放入A盒"
-        }
-      ],
-      "steps": [
-        {
-          "at": "2026-06-21T03:50:30.042Z",
-          "step": "入盒",
-          "developStatus": "稳定",
-          "defect": "边角显影不均",
-          "repair": "边角重涂",
-          "note": "放入A盒"
         }
       ]
+    },
+    {
+      "id": "CN-002",
+      "code": "CN-002",
+      "plateSize": "13x18cm",
+      "exposure": "6分钟",
+      "waterSource": "井水过滤",
+      "status": "待曝光",
+      "logs": [
+        {
+          "at": "2026-10-06T16:12:40.996Z",
+          "step": "补来源",
+          "note": "历史数据无批次号，升级补来源 B-LEGACY（batchSource=legacy-backfill）"
+        }
+      ],
+      "chemicalBatch": "B-LEGACY",
+      "batchSource": "legacy-backfill"
     }
-  ]
+  ],
+  "operations": [],
+  "idempotency": {}
 }
